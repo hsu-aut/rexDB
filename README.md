@@ -3,7 +3,7 @@
 An Admin web application built with Angular on the frontend and NestJS on the backend. Frontend is based on SB-Admin-Template.
 This is a template repository that you can use to start developing your own web application!
 
-:construction: Please n ote: The template is working finde, but the documentation is under construction. Please create an issue if you have any questions :construction:
+:construction: Please note: The template is working finde, but the documentation is under construction. Please create an issue if you have any questions :construction:
 
 ## How to run
 
