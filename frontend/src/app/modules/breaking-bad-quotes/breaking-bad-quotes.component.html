@@ -1,0 +1,21 @@
+<div class="p-3">
+    <div class="row">
+        <div class="col-md-12">
+            <p class="lead">
+                You miss Breaking Bad? Thats okay, who doesn't?<br>
+                Cheer yourself up with some of these Breaking Bad quotes...
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <blockquote class="blockquote mt-5">
+                <p class="mb-0">{{this.quote?.quote}}</p>
+                <footer class="blockquote-footer">{{this.quote?.author}}</footer>
+            </blockquote>
+
+            <button class="btn btn-primary mt-3" (click)="getQuote()">Get a new one</button>
+            </div>
+        </div>
+    </div>
