@@ -19,17 +19,19 @@ It's best to open two terminals. Use one to run the backend and the other one fo
 *Documentation coming soon*
 
 ## Directory structure
-- Backend: A Nest JS application containing all your backend services and business logic
+- backend: A Nest JS application containing all your backend services and business logic
   - All backend dependencies have to be put inside the separate package.json inside the backend folder
   - All API routes are inside `backend/src/routes`
 
-- Frontend: An angular application
+- frontend: An angular application
   - All backend dependencies have to be put inside the separate package.json inside the frontend folder
   - Everything related to the basic layout should stay inside `frontend/src/app/layout`
   - All your modules with their components (.ts, .html, and .scss) should be put in `frontend/src/app/modules`
   - All code that's not part of one modules but is instead used by more than one module (e.g. your services, pipes, interceptors) should be put inside `frontend/src/app/shared`
   - Everything static (e.g. images) belongs inside `frontend/src/app/assets`
   - Angular environment definitions are kept in `frontend/src/app/environments`
+
+- shared: You can put all classes / interfaces which you want to share between backend and frontend in this folder
 
 ## How to make it your own
 This repository acts as a basic starting point to spare you some efforts and help you to get started quickly. The following two sections describe how you can create you own web application from this repository.
