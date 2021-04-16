@@ -1,7 +1,7 @@
 {
-  "name": "angular-nest-webapp-backend",
+  "name": "rexDB-backend",
   "version": "0.0.1",
-  "description": "NestJS Backend application",
+  "description": "rexDB NestJS Backend application",
   "author": "",
   "private": true,
   "license": "MIT",
