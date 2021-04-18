@@ -1,4 +1,9 @@
-# rexDB
+<h1 align="center">rexDB - A Knowledge Graph for Researcher Expertise</h1>
+<p align="center">
+    <img width="400px" src="https://github.com/hsu-aut/rexDB/blob/documentation/images/images/rexDB-Icon.png">
+</p>
+
+<hr>
 
 A web application powered by an ontology that can be used to create, display and maintain researcher expertise (e.g. skills, projects, publications).
 
