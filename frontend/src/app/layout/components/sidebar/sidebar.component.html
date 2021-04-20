@@ -8,6 +8,10 @@
             <i class="fas fa-quote-right fa-fw"></i>&nbsp;
             <span>{{ 'Breaking Bad Quotes' | translate }}</span>
         </a>
+        <a [routerLinkActive]="['router-link-active']" [routerLink]="['/graphql']" class="list-group-item">
+            <i class="fas fa-quote-right fa-fw"></i>&nbsp; <!--TODO-->
+            <span>{{ 'GraphQL Beispiel' | translate }}</span>
+        </a>
         <a [routerLinkActive]="['router-link-active']" [routerLink]="['/charts']" class="list-group-item">
             <i class="fas fa-chart-line fa-fw"></i>&nbsp;
             <span>{{ 'Charts' | translate }}</span>
