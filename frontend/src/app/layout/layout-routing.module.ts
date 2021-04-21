@@ -17,7 +17,7 @@ const routes: Routes = [
             { path: 'components', loadChildren: () => import('../modules/bs-component/bs-component.module').then((m) => m.BsComponentModule)},
             { path: 'blank-page', loadChildren: () => import('../modules/blank-page/blank-page.module').then((m) => m.BlankPageModule)},
             { path: 'breaking-bad-quotes', loadChildren: () => import('../modules/breaking-bad-quotes/breaking-bad-quotes.module').then((m) => m.BreakingBadQuotesModule)},
-            { path: 'garphql', loadChildren: () => import('../modules/graphql/graphql.module').then((m) => m.GraphqlModule)}
+            { path: 'graphql', loadChildren: () => import('../modules/graphql/graphql.module').then((m) => m.GraphqlModule)}
         ]
     }
 ];
