@@ -16,7 +16,8 @@ const routes: Routes = [
             { path: 'grid', loadChildren: () => import('../modules/grid/grid.module').then((m) => m.GridModule) },
             { path: 'components', loadChildren: () => import('../modules/bs-component/bs-component.module').then((m) => m.BsComponentModule)},
             { path: 'blank-page', loadChildren: () => import('../modules/blank-page/blank-page.module').then((m) => m.BlankPageModule)},
-            { path: 'breaking-bad-quotes', loadChildren: () => import('../modules/breaking-bad-quotes/breaking-bad-quotes.module').then((m) => m.BreakingBadQuotesModule)}
+            { path: 'breaking-bad-quotes', loadChildren: () => import('../modules/breaking-bad-quotes/breaking-bad-quotes.module').then((m) => m.BreakingBadQuotesModule)},
+            { path: 'expert-search', loadChildren: () => import('../modules/expert-search/expert-search.module').then((m) => m.ExpertSearchModule)}
         ]
     }
 ];
