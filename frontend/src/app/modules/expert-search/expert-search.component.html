@@ -1,75 +1,42 @@
-<div [@routerTransition]>
-    <app-page-header [heading]="'Forms'" [icon]="'fa-edit'"></app-page-header>
 
-<div [@routerTransition]>
-    <app-page-header [heading]="'Forms'" [icon]="'fa-edit'"></app-page-header>
+<fieldset class="form-group">
+    <label>SPARQL-Query</label>
+    <textarea class="form-control" rows="3" [(ngModel)]="str"></textarea>
+    <p class="help-block">Enter a SPARQL-Query to query the RExDB directly!</p>
+</fieldset>
 
-    <div *ngIf="loading">
-        Loading...
+<button class="btn btn-secondary" (click)="onSubmit(str)">Submit Button</button>
+
+<div *ngIf="notClick">
+    Click Button ...
+</div>
+<div *ngIf="loading">
+    Loading ...
+</div>
+<div *ngIf="error">
+    Error :(
+</div>
+<div *ngIf="rates">
+    <div class="card-header">
+        Response:
     </div>
-    <div *ngIf="error">
-        Error :(
+    <!--TODO: responsive to json answer-->
+    <div class="card-body table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Currency</th>
+                    <th>Rate</th>
+                </tr>
+            </thead>
+            <div *ngFor="let rate of rates">
+                <tbody>
+                    <tr>
+                        <td>{{ rate.currency }}</td>
+                        <td>{{ rate.rate }}</td>
+                    </tr>
+                </tbody>
+            </div>
+        </table>
     </div>
-    <div *ngIf="rates">
-        <div *ngFor="let rate of rates">
-            <p>{{ rate.currency }}: {{ rate.rate }}</p>
-        </div>
-    </div>
-
-
-
-    <div class="row">
-        <div class="col-lg-6">
-            <form role="form">
-
-                <fieldset class="form-group">
-                    <label>SPARQL-Query</label>
-                    <textarea class="form-control" rows="3"></textarea>
-                    <p class="help-block">Enter a SPARQL-Query to query the RExDB directly!</p>
-                </fieldset>
-                <button class="btn btn-secondary" type="submit">Submit Button</button>
-                <button class="btn btn-secondary" type="reset">Reset Button</button>
-
-                <div class="card mb-3">
-                    <div class="card-header">
-                        Response:
-                    </div>
-                    <div class="card-body table-responsive">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Username</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </form>
-        </div>
-        
-    </div>
-    <!-- /.row -->
 </div>
