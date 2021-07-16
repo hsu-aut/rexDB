@@ -6,7 +6,7 @@ import { TablesRoutingModule } from './tables-routing.module';
 import { TablesComponent } from './tables.component';
 
 @NgModule({
-    imports: [CommonModule, TablesRoutingModule, PageHeaderModule],
-    declarations: [TablesComponent]
+	imports: [CommonModule, TablesRoutingModule, PageHeaderModule],
+	declarations: [TablesComponent]
 })
 export class TablesModule {}

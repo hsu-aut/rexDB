@@ -3,45 +3,36 @@
         <div class="card">
             <div class="card-header">Tabset</div>
             <div class="card-body">
-                <ngb-tabset>
-                    <ngb-tab title="Simple">
-                        <ng-template ngbTabContent>
-                            <p>
-                                Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown
-                                aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan
-                                helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu
-                                banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone.
-                                Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
-                            </p>
-                        </ng-template>
-                    </ngb-tab>
-                    <ngb-tab>
-                        <ng-template ngbTabTitle><b>Fancy</b> title</ng-template>
-                        <ng-template ngbTabContent>
-                            <p>
-                                Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson
-                                artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo
-                                enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud
-                                organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia
-                                yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes
-                                anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson
-                                biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente
-                                accusamus tattooed echo park.
-                            </p>
-                        </ng-template>
-                    </ngb-tab>
-                    <ngb-tab [disabled]="true" title="Disabled">
-                        <ng-template ngbTabContent>
-                            <p>
-                                Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown
-                                aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan
-                                helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu
-                                banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone.
-                                Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
-                            </p>
-                        </ng-template>
-                    </ngb-tab>
-                </ngb-tabset>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Messages</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Settings</button>
+                    </li>
+                  </ul>
+
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                    <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum quaerat mollitia sit perferendis totam voluptate!
+                    </div>
+                    <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, quo minus! Sint explicabo suscipit alias sunt, maxime ullam? Reiciendis, quia.
+                    </div>
+                    <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, repellendus repellat deleniti id numquam veritatis doloribus quos asperiores aspernatur maiores enim libero distinctio quae accusamus.
+                    </div>
+                    <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi qui necessitatibus mollitia itaque amet, temporibus rerum harum.
+                    </div>
+                  </div>
             </div>
         </div>
     </div>
@@ -49,46 +40,36 @@
         <div class="card">
             <div class="card-header">Pills</div>
             <div class="card-body">
-                <ngb-tabset type="pills">
-                    <ngb-tab title="Simple">
-                        <ng-template ngbTabContent>
-                            <p>
-                                Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown
-                                aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan
-                                helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu
-                                banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone.
-                                Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
-                            </p>
-                        </ng-template>
-                    </ngb-tab>
-                    <ngb-tab>
-                        <ng-template ngbTabTitle><b>Fancy</b> title</ng-template>
-                        <ng-template ngbTabContent
-                            >Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.
-                            <p>
-                                Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson
-                                artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo
-                                enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud
-                                organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia
-                                yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes
-                                anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson
-                                biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente
-                                accusamus tattooed echo park.
-                            </p>
-                        </ng-template>
-                    </ngb-tab>
-                    <ngb-tab [disabled]="true" title="Disabled">
-                        <ng-template ngbTabContent>
-                            <p>
-                                Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown
-                                aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan
-                                helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu
-                                banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone.
-                                Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
-                            </p>
-                        </ng-template>
-                    </ngb-tab>
-                </ngb-tabset>
+                <ul class="nav nav-pills" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#pills-home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#pills-messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Messages</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#pills-settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Settings</button>
+                    </li>
+                  </ul>
+
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                    <div class="tab-pane active" id="pills-home" role="tabpanel" aria-labelledby="home-tab">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo vero ab in, aperiam non quam modi rerum eaque! Numquam, cumque!
+                    </div>
+                    <div class="tab-pane" id="pills-profile" role="tabpanel" aria-labelledby="profile-tab">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa pariatur repellendus praesentium incidunt. Similique nostrum soluta quam! Odio repellat non placeat sunt iure enim animi, repudiandae reprehenderit reiciendis laudantium! Reiciendis!
+                    </div>
+                    <div class="tab-pane" id="pills-messages" role="tabpanel" aria-labelledby="messages-tab">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus sapiente temporibus fugiat quam perspiciatis odio debitis, velit eligendi exercitationem quo dolore laboriosam numquam expedita praesentium.
+                    </div>
+                    <div class="tab-pane" id="pills-settings" role="tabpanel" aria-labelledby="settings-tab">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab quidem rem velit excepturi deserunt explicabo quae saepe non quia rerum.
+                    </div>
+                  </div>
             </div>
         </div>
     </div>

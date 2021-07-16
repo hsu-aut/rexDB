@@ -1,57 +1,41 @@
-<h1>Test</h1>
 <div class="row mb-3">
     <div class="col col-sm-6">
         <div class="card">
-            <div class="card-header">Radio Button group (<strong>Using ngModel</strong>)</div>
+            <div class="card-header">Checkbox Button Group (<strong>Using functions to update value</strong>)</div>
             <div class="card-body">
-                <div [(ngModel)]="model" class="btn-group btn-group-toggle mb-3" name="radioBasic" ngbRadioGroup>
-                    <label class="btn-primary" ngbButtonLabel>
-                        <input [value]="1" ngbButton type="radio" /> Left (pre-checked)
-                    </label>
-                    <label class="btn-primary" ngbButtonLabel>
-                        <input ngbButton type="radio" value="middle" /> Middle
-                    </label>
-                    <label class="btn-primary" ngbButtonLabel>
-                        <input [value]="false" ngbButton type="radio" /> Right
-                    </label>
+                <div class="btn-group mb-3" role="group" aria-label="Basic checkbox toggle button group">
+                    <input type="checkbox" class="btn-check" (click)="addRadioButtonSelection(1)" id="btncheck1" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
+
+                    <input type="checkbox" class="btn-check" (click)="addRadioButtonSelection(2)" id="btncheck2" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
+
+                    <input type="checkbox" class="btn-check" (click)="addRadioButtonSelection(3)" id="btncheck3" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
                 </div>
-                <div class="alert alert-info mb-0"><strong>Selected Value: </strong>{{ model }}</div>
+                <div class="alert alert-info mb-0"><strong>Selected Value: </strong>{{radioButtonGroupSelection.toString()}}</div>
             </div>
         </div>
     </div>
     <div class="col col-sm-6">
         <div class="card">
-            <div class="card-header">Radio Button group (<strong>Ractive Forms</strong>)</div>
+            <div class="card-header">Radio Button group (<strong>Reactive Forms</strong>)</div>
             <div class="card-body">
                 <form [formGroup]="radioGroupForm" class="mb-3">
-                    <div class="btn-group btn-group-toggle" formControlName="model" name="radioBasic" ngbRadioGroup>
-                        <label class="btn-primary" ngbButtonLabel>
-                            <input [value]="1" ngbButton type="radio" /> Left (pre-checked)
-                        </label>
-                        <label class="btn-primary" ngbButtonLabel>
-                            <input ngbButton type="radio" value="middle" /> Middle
-                        </label>
-                        <label class="btn-primary" ngbButtonLabel>
-                            <input [value]="false" ngbButton type="radio" /> Right
-                        </label>
+                    <div class="btn-group btn-group-toggle" name="radioBasic">
+                        <input type="radio" class="btn-check" value="left" formControlName="radio"  id="btnradio1" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btnradio1">Radio 1</label>
+
+                        <input type="radio" class="btn-check" value="middle" formControlName="radio" id="btnradio2" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btnradio2">Radio 2</label>
+
+                        <input type="radio" class="btn-check" value="right" formControlName="radio" id="btnradio3" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btnradio3">Radio 3</label>
                     </div>
                 </form>
                 <div class="alert alert-info mb-0">
-                    <strong>Selected Value: </strong>{{ radioGroupForm.value.model }}
+                    <strong>Selected Value: </strong>{{ radioGroupForm.value.radio }}
                 </div>
-                <!-- <form [formGroup]="radioGroupForm">
-                    <div ngbRadioGroup name="radioBasic" formControlName="model">
-                        <label class="btn btn-primary">
-                            <input type="radio" [value]="1"> Left (pre-checked)
-                        </label>
-                        <label class="btn btn-primary">
-                            <input type="radio" value="middle"> Middle
-                        </label>
-                        <label class="btn btn-primary">
-                            <input type="radio" [value]="false"> Right
-                        </label>
-                    </div>
-                </form> -->
             </div>
         </div>
     </div>

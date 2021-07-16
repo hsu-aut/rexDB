@@ -1,16 +1,16 @@
 <div [@routerTransition]>
     <app-page-header [heading]="'Bootstrap Elements'" [icon]="'fa-desktop'"></app-page-header>
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-        <h1>Hello, world!</h1>
-        <p>
-            This is a template for a simple marketing or informational website. It includes a large callout called a
-            jumbotron and three supporting pieces of content. Use it as a starting point to create something more
-            unique.
-        </p>
-        <p>
-            <a class="btn btn-primary btn-lg" href="javascript:void(0)" role="button">Learn more »</a>
-        </p>
+
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">Hello, world!</h1>
+            <p class="col-md-8 fs-4"> This is a template for a simple marketing or informational website. It includes a
+                large callout called a
+                jumbotron and three supporting pieces of content. Use it as a starting point to create something more
+                unique.</p>
+            <button class="btn btn-primary btn-lg" type="button">Learn more »</button>
+        </div>
     </div>
 
     <div class="page-header">
@@ -60,11 +60,11 @@
         <h1>Dropdown menus</h1>
         <hr />
     </div>
-    <div class="dropdown theme-dropdown clearfix" ngbDropdown>
-        <button class="btn btn-secondary" ngbDropdownToggle>
+    <div class="dropdown theme-dropdown clearfix">
+        <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">
             Dropdown
         </button>
-        <div aria-labelledby="dropdownMenu1" class="dropdown-menu" ngbDropdownMenu>
+        <div aria-labelledby="dropdownMenu1" class="dropdown-menu">
             <a class="dropdown-item" href="javascript:void(0)">Action</a>
             <a class="dropdown-item" href="javascript:void(0)">Another action</a>
             <a class="dropdown-item" href="javascript:void(0)">Something else here</a>
@@ -76,50 +76,54 @@
         <h1>Navbars</h1>
     </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input aria-label="Search" class="form-control mr-sm-2" placeholder="Search" type="text" />
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
         </div>
     </nav>
     <br />
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input aria-label="Search" class="form-control mr-sm-2" placeholder="Search" type="text" />
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
         </div>
     </nav>
 
@@ -141,74 +145,32 @@
         <hr />
     </div>
     <div class="progress">
-        <div
-            aria-valuemax="100"
-            aria-valuemin="0"
-            aria-valuenow="25"
-            class="progress-bar"
-            role="progressbar"
-            style="width: 25%; height: 10px;"
-        ></div>
+        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-bar" role="progressbar"
+            style="width: 25%"></div>
     </div>
     <br />
     <div class="progress">
-        <div
-            aria-valuemax="100"
-            aria-valuemin="0"
-            aria-valuenow="25"
-            class="progress-bar bg-success"
-            role="progressbar"
-            style="width: 25%;"
-        ></div>
+        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="progress-bar bg-success" role="progressbar"
+            style="width: 25%;"></div>
     </div>
     <br />
     <div class="progress">
-        <div
-            aria-valuemax="100"
-            aria-valuemin="0"
-            aria-valuenow="50"
-            class="progress-bar bg-info"
-            role="progressbar"
-            style="width: 50%;"
-        ></div>
+        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress-bar bg-info" role="progressbar"
+            style="width: 50%;"></div>
     </div>
     <br />
     <div class="progress">
-        <div
-            aria-valuemax="100"
-            aria-valuemin="0"
-            aria-valuenow="15"
-            class="progress-bar"
-            role="progressbar"
-            style="width: 15%;"
-        ></div>
-        <div
-            aria-valuemax="100"
-            aria-valuemin="0"
-            aria-valuenow="30"
-            class="progress-bar bg-success"
-            role="progressbar"
-            style="width: 30%;"
-        ></div>
-        <div
-            aria-valuemax="100"
-            aria-valuemin="0"
-            aria-valuenow="20"
-            class="progress-bar bg-info"
-            role="progressbar"
-            style="width: 20%;"
-        ></div>
+        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="progress-bar" role="progressbar"
+            style="width: 15%;"></div>
+        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="progress-bar bg-success" role="progressbar"
+            style="width: 30%;"></div>
+        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="progress-bar bg-info" role="progressbar"
+            style="width: 20%;"></div>
     </div>
     <br />
     <div class="progress">
-        <div
-            aria-valuemax="100"
-            aria-valuemin="0"
-            aria-valuenow="100"
-            class="progress-bar progress-bar-striped bg-danger"
-            role="progressbar"
-            style="width: 100%;"
-        ></div>
+        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="100"
+            class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%;"></div>
     </div>
     <br />
 
