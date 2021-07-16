@@ -31,6 +31,7 @@
         "chart.js": "2.9.3",
         "core-js": "3.6.5",
         "font-awesome": "4.7.0",
+        "i": "^0.3.6",
         "jquery": "^3.6.0",
         "ng2-charts": "2.4.2",
         "popper.js": "^1.16.1",
