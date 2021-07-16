@@ -1,0 +1,42 @@
+
+<fieldset class="form-group">
+    <label>SPARQL-Query</label>
+    <textarea class="form-control" rows="3" [(ngModel)]="str"></textarea>
+    <p class="help-block">Enter a SPARQL-Query to query the RExDB directly!</p>
+</fieldset>
+
+<button class="btn btn-secondary" (click)="onSubmit(str)">Submit Button</button>
+
+<div *ngIf="notClick">
+    Click Button ...
+</div>
+<div *ngIf="loading">
+    Loading ...
+</div>
+<div *ngIf="error">
+    Error :(
+</div>
+<div *ngIf="rates">
+    <div class="card-header">
+        Response:
+    </div>
+    <!--TODO: responsive to json answer-->
+    <div class="card-body table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Currency</th>
+                    <th>Rate</th>
+                </tr>
+            </thead>
+            <div *ngFor="let rate of rates">
+                <tbody>
+                    <tr>
+                        <td>{{ rate.currency }}</td>
+                        <td>{{ rate.rate }}</td>
+                    </tr>
+                </tbody>
+            </div>
+        </table>
+    </div>
+</div>

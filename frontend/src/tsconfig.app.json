@@ -4,6 +4,8 @@
         "outDir": "../out-tsc/app",
         "baseUrl": "./",
         "types": ["node"],
+        "lib": ["es2018", "dom", "esnext.asynciterable"],
+        "allowSyntheticDefaultImports": true, //da zen-observable "falsch"exportiert
         "paths": {
             "@shared/*": [
                 "../../shared/*"
