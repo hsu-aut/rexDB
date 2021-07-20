@@ -5,93 +5,109 @@
         <div class="col-lg-6">
             <form role="form">
                 <fieldset class="form-group">
-                    <label>Text Input</label>
+                    <label class="form-label">Text Input</label>
                     <input class="form-control" />
-                    <p class="help-block">Example block-level help text here.</p>
+                    <p class="form-text">Example block-level help text here.</p>
                 </fieldset>
 
-                <fieldset class="form-group">
-                    <label>Text Input with Placeholder</label>
+                <fieldset class="form-group mb-3">
+                    <label class="form-label">Text Input with Placeholder</label>
                     <input class="form-control" placeholder="Enter text" />
                 </fieldset>
 
-                <div class="form-group">
-                    <label>Static Control</label>
-                    <p class="form-control-static">email@example.com</p>
-                </div>
-
-                <fieldset class="form-group">
-                    <label for="exampleInputFile">File input</label>
-                    <input class="form-control-file" id="exampleInputFile" type="file" />
+                <fieldset class="form-group mb-3">
+                    <label class="form-label">Static Control</label>
+                    <input type="text" readonly class="form-control-plaintext" id="staticEmail"
+                        value="email@example.com">
                 </fieldset>
 
-                <fieldset class="form-group">
-                    <label>Text area</label>
+                <fieldset class="form-group mb-3">
+                    <label for="formFile" class="form-label">File input</label>
+                    <input class="form-control" type="file" id="formFile">
+                </fieldset>
+
+                <fieldset class="form-group mb-3">
+                    <label class="form-label">Text area</label>
                     <textarea class="form-control" rows="3"></textarea>
                 </fieldset>
 
-                <div class="form-group">
-                    <label>Checkboxes</label>
-                    <div class="checkbox">
-                        <label> <input type="checkbox" value="" /> Checkbox 1 </label>
+                <fieldset class="form-group mb-3">
+                    <label class="form-label">Checkboxes</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">Checkbox 1</label>
                     </div>
-                    <div class="checkbox">
-                        <label> <input type="checkbox" value="" /> Checkbox 2 </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">Checkbox 2</label>
                     </div>
-                    <div class="checkbox">
-                        <label> <input type="checkbox" value="" /> Checkbox 3 </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">Checkbox 3</label>
                     </div>
-                </div>
+                </fieldset>
 
-                <div class="form-group">
-                    <label>Inline Checkboxes</label>
-                    <label class="checkbox-inline"> <input type="checkbox" />1 </label>
-                    <label class="checkbox-inline"> <input type="checkbox" />2 </label>
-                    <label class="checkbox-inline"> <input type="checkbox" />3 </label>
-                </div>
+                <fieldset class="form-group mb-3">
+                    <label class="form-label me-3">Inline Checkboxes</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+                        <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+                    </div>
+                </fieldset>
 
-                <fieldset class="form-group">
-                    <label>Radio Buttons</label>
-                    <div class="radio">
-                        <label>
-                            <input checked="" id="optionsRadios1" name="optionsRadios" type="radio" value="option1" />
+                <fieldset class="form-group mb-3">
+                    <label class="form-label">Radio Buttons</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+                            checked>
+                        <label class="form-check-label" for="flexRadioDefault1">
                             Radio 1
                         </label>
                     </div>
-                    <div class="radio">
-                        <label>
-                            <input id="optionsRadios2" name="optionsRadios" type="radio" value="option2" /> Radio 2
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Radio 2
                         </label>
                     </div>
-                    <div class="radio">
-                        <label>
-                            <input id="optionsRadios3" name="optionsRadios" type="radio" value="option3" /> Radio 3
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                        <label class="form-check-label" for="flexRadioDefault3">
+                            Radio 3
                         </label>
                     </div>
                 </fieldset>
 
                 <fieldset class="form-group">
-                    <label>Inline Radio Buttons</label>
-                    <label class="radio-inline">
-                        <input
-                            checked=""
-                            id="optionsRadiosInline1"
-                            name="optionsRadiosInline"
-                            type="radio"
-                            value="option1"
-                        />1
-                    </label>
-                    <label class="radio-inline">
-                        <input id="optionsRadiosInline2" name="optionsRadiosInline" type="radio" value="option2" />2
-                    </label>
-                    <label class="radio-inline">
-                        <input id="optionsRadiosInline3" name="optionsRadiosInline" type="radio" value="option3" />3
-                    </label>
+                    <label class="form-label me-3">Inline Radio Buttons</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                            value="option1">
+                        <label class="form-check-label" for="inlineRadio1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="option2">
+                        <label class="form-check-label" for="inlineRadio2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                            value="option3" disabled>
+                        <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+                    </div>
                 </fieldset>
 
-                <div class="form-group">
-                    <label>Selects</label>
-                    <select class="form-control">
+                <div class="form-group mb-3">
+                    <label class="form-label">Selects</label>
+                    <select class="form-select">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -100,9 +116,9 @@
                     </select>
                 </div>
 
-                <fieldset class="form-group">
-                    <label>Multiple Selects</label>
-                    <select class="form-control" multiple="">
+                <fieldset class="form-group mb-3">
+                    <label class="form-label">Multiple Selects</label>
+                    <select class="form-select" multiple="">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -111,7 +127,7 @@
                     </select>
                 </fieldset>
 
-                <button class="btn btn-secondary" type="submit">Submit Button</button>
+                <button class="btn btn-success" type="submit">Submit Button</button>
                 <button class="btn btn-secondary" type="reset">Reset Button</button>
             </form>
         </div>
@@ -119,30 +135,28 @@
             <h4>Disabled Form States</h4>
 
             <form role="form">
-                <fieldset disabled="">
+                <fieldset>
                     <div class="form-group">
-                        <label for="disabledSelect">Disabled input</label>
-                        <input
-                            class="form-control"
-                            disabled=""
-                            id="disabledInput"
-                            placeholder="Disabled input"
-                            type="text"
-                        />
+                        <label class="form-label" for="disabledSelect">Disabled input</label>
+                        <input class="form-control" id="disabledInput" placeholder="Disabled input" type="text"
+                            disabled />
                     </div>
 
                     <div class="form-group">
-                        <label for="disabledSelect">Disabled select menu</label>
-                        <select class="form-control" id="disabledSelect">
+                        <label class="form-label" for="disabledSelect">Disabled select menu</label>
+                        <select class="form-select" id="disabledSelect" disabled>
                             <option>Disabled select</option>
                         </select>
                     </div>
 
-                    <div class="checkbox">
-                        <label> <input type="checkbox" /> Disabled Checkbox </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
+                        <label class="form-check-label" for="flexCheckDisabled">
+                            Disabled checkbox
+                        </label>
                     </div>
 
-                    <button class="btn btn-primary" type="submit">Disabled Button</button>
+                    <button class="btn btn-primary" disabled type="submit">Disabled Button</button>
                 </fieldset>
             </form>
             <br />
@@ -150,71 +164,58 @@
             <h4>Form Validation</h4>
 
             <form role="form">
-                <div class="form-group">
-                    <label class="form-control-label" for="inputSuccess">Input with success</label>
+                <div class="form-group mb-3">
+                    <label class="form-label" for="inputSuccess">Input with success</label>
                     <input class="form-control is-valid" id="inputSuccess" type="text" />
-                    <div class="valid-feedback">
-                        Input success message
-                    </div>
+                    <div class="valid-feedback">Input success message</div>
                 </div>
 
-                <div class="form-group">
-                    <label class="form-control-label" for="inputError">Input with danger</label>
+                <div class="form-group mb-3">
+                    <label class="form-label" for="inputError">Input with danger</label>
                     <input class="form-control is-invalid" id="inputError" type="text" />
-                    <div class="invalid-feedback">
-                        Input error message
-                    </div>
+                    <div class="invalid-feedback">Input error message</div>
                 </div>
             </form>
 
             <h4>Input Groups</h4>
 
             <form role="form">
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1">@</span>
-                    </div>
-                    <!-- <span class="input-group-addon">@</span> -->
-                    <input class="form-control" placeholder="Username" type="text" />
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                        aria-describedby="basic-addon1">
                 </div>
 
-                <div class="form-group input-group">
-                    <input class="form-control" type="text" />
-                    <div class="input-group-append">
-                        <span class="input-group-text">.00</span>
-                    </div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                    <span class="input-group-text">.00</span>
                 </div>
 
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-eur"></i></span>
-                    </div>
-                    <input class="form-control" placeholder="Font Awesome Icon" type="text" />
+                <div class="input-group mb-3">
+                    <span class="input-group-text">€</span>
+                    <input type="text" class="form-control" placeholder="Fontawesome Icon">
                 </div>
 
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1">$</span>
-                    </div>
-                    <input class="form-control" type="text" />
-                    <div class="input-group-append">
-                        <span class="input-group-text">.00</span>
-                    </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">$</span>
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                    <span class="input-group-text">.00</span>
                 </div>
 
-                <div class="form-group input-group">
-                    <input class="form-control" type="text" />
-                    <div class="input-group-append">
-                        <button class="btn btn-secondary" type="button"><i class="fa fa-search"></i></button>
-                    </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" aria-label="Recipient's username"
+                        aria-describedby="button-addon2">
+                    <button class="btn btn-secondary" type="button" id="button-addon2">
+                        <i class="fa fa-search"></i>
+                    </button>
                 </div>
             </form>
 
             <p>
                 For complete documentation, please visit
-                <a href="https://getbootstrap.com/docs/4.0/components/forms/" target="_blank"
-                    >Bootstrap's Form Documentation</a
-                >.
+                <a href="https://getbootstrap.com/docs/5.0/forms/overview/" target="_blank">Bootstrap's Form
+                    Documentation</a>.
             </p>
         </div>
     </div>

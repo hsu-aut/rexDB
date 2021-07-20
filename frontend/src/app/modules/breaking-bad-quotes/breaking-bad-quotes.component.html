@@ -8,14 +8,16 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row mt-4">
         <div class="col-md-12">
-            <blockquote class="blockquote mt-5">
-                <p class="mb-0">{{this.quote?.quote}}</p>
-                <footer class="blockquote-footer">{{this.quote?.author}}</footer>
-            </blockquote>
-
-            <button class="btn btn-primary mt-3" (click)="getQuote()">Get a new one</button>
-            </div>
+            <figure>
+                <blockquote class="blockquote">
+                  <p>{{this.quote?.quote}}</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                  {{this.quote?.author}}
+                </figcaption>
+              </figure>
+              <button class="btn btn-primary mt-3" (click)="getQuote()">Get a new one</button>
         </div>
     </div>

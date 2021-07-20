@@ -3,14 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { GridComponent } from './grid.component';
 
 const routes: Routes = [
-    {
-        path: '',
-        component: GridComponent
-    }
+	{
+		path: '',
+		component: GridComponent
+	}
 ];
 
 @NgModule({
-    imports: [RouterModule.forChild(routes)],
-    exports: [RouterModule]
+	imports: [RouterModule.forChild(routes)],
+	exports: [RouterModule]
 })
 export class GridRoutingModule {}

@@ -7,7 +7,7 @@ import { ChartsRoutingModule } from './charts-routing.module';
 import { ChartsComponent } from './charts.component';
 
 @NgModule({
-    imports: [CommonModule, Ng2Charts, ChartsRoutingModule, PageHeaderModule],
-    declarations: [ChartsComponent]
+	imports: [CommonModule, Ng2Charts, ChartsRoutingModule, PageHeaderModule],
+	declarations: [ChartsComponent]
 })
 export class ChartsModule {}

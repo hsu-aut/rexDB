@@ -5,10 +5,10 @@ import { BreakingBadQuoteService } from './breaking-bad-quote.service';
 
 @Controller("/breaking-bad-quotes")
 export class BreakingBadQuoteController {
-  constructor(private readonly bbQuoteService: BreakingBadQuoteService) {}
+	constructor(private readonly bbQuoteService: BreakingBadQuoteService) {}
 
   @Get()
-  getQuote(): Observable<BreakingBadQuote> {
-    return this.bbQuoteService.getQuote();
-  }
+	getQuote(): Observable<BreakingBadQuote> {
+		return this.bbQuoteService.getQuote();
+	}
 }

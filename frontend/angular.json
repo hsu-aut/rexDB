@@ -9,6 +9,7 @@
             "projectType": "application",
             "architect": {
                 "build": {
+                    "defaultConfiguration": "development",
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
                         "outputPath": "dist",
@@ -22,8 +23,6 @@
                             "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
                             "src/styles/app.scss"],
                         "scripts": [
-                            "node_modules/jquery/dist/jquery.min.js",
-                            "node_modules/popper.js/dist/umd/popper.min.js",
                             "node_modules/bootstrap/dist/js/bootstrap.bundle.js",
                             "node_modules/chart.js/dist/Chart.js"
                         ],
@@ -40,7 +39,6 @@
                             "optimization": true,
                             "outputHashing": "all",
                             "sourceMap": false,
-                            "extractCss": true,
                             "namedChunks": false,
                             "aot": true,
                             "extractLicenses": true,
@@ -53,6 +51,12 @@
                                     "maximumError": "5mb"
                                 }
                             ]
+                        },
+                        "development": {
+                            "optimization": false,
+                            "vendorChunk": true,
+                            "extractLicenses": false,
+                            "sourceMap": true
                         }
                     }
                 },

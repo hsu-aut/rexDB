@@ -3,9 +3,12 @@
         <div class="card mb-3">
             <div class="card-header">Buttons</div>
             <div class="card-body">
-                <p *ngFor="let alert of alerts">
-                    <ngb-alert (close)="closeAlert(alert)" [type]="alert.type">{{ alert.message }}</ngb-alert>
-                </p>
+                <div *ngFor="let alert of alerts">
+                    <div class="alert alert-dismissible fade show" [class]="'alert-'+ alert.type" role="alert">
+                        {{alert.message}}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

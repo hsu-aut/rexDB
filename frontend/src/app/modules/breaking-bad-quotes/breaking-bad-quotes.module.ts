@@ -5,11 +5,11 @@ import { BreakingBadQuotesRoutingModule } from './breaking-bad-quotes.routing.mo
 import { BreakingBadQuotesService } from '../../shared/services/breaking-bad-quotes.service';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    BreakingBadQuotesRoutingModule
-  ],
-  declarations: [BreakingBadQuotesComponent],
-  providers: [BreakingBadQuotesService]
+	imports: [
+		CommonModule,
+		BreakingBadQuotesRoutingModule
+	],
+	declarations: [BreakingBadQuotesComponent],
+	providers: [BreakingBadQuotesService]
 })
 export class BreakingBadQuotesModule { }

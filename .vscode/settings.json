@@ -1,0 +1,7 @@
+{
+    "eslint.workingDirectories": ["frontend", "backend", "shared"],
+    "typescript.preferences.importModuleSpecifier": "relative",
+	"editor.detectIndentation": false,
+	"editor.useTabStops": true,
+	"editor.tabSize": 4
+}

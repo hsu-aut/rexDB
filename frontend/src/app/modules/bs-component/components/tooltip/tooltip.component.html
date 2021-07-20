@@ -1,22 +1,21 @@
-<div class="card">
+<div class="card mt-3">
     <div class="card-header">
         Tooltip
     </div>
     <div class="card-body">
-        <button class="btn btn-secondary" ngbTooltip="Tooltip on top" placement="top" type="button">
+        <button class="btn btn-secondary" #tooltip data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
             Tooltip on top
         </button>
-        <button class="btn btn-secondary" ngbTooltip="Tooltip on right" placement="right" type="button">
+        <button class="btn btn-secondary" #tooltip data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on top">
             Tooltip on right
         </button>
-        <button class="btn btn-secondary" ngbTooltip="Tooltip on bottom" placement="bottom" type="button">
+        <button class="btn btn-secondary" #tooltip data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on top">
             Tooltip on bottom
         </button>
-        <button class="btn btn-secondary" ngbTooltip="Tooltip on left" placement="left" type="button">
+        <button class="btn btn-secondary" #tooltip  data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on top">
             Tooltip on left
         </button>
-        <ng-template #StaticTipContent><em>Tooltip</em> <u>with</u> <b>HTML</b></ng-template>
-        <button [ngbTooltip]="StaticTipContent" class="btn btn-secondary" data-html="true" type="button">
+        <button type="button" #tooltip class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" title="<em>Tooltip </em> <u>with</u> <b>HTML</b>">
             Tooltip with HTML
         </button>
     </div>
