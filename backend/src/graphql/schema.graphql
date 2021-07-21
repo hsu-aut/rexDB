@@ -1,10 +1,21 @@
+# Import of custom type to account for dynamic key
+scalar SparqlResultEntry,
 
-
-type SparqlQuery {
-	queryString: String
+type SparqlQueryResult {
+	head: HeadObject,
+	results: ResultObject
 }
 
+type HeadObject {
+	vars: [String]
+}
+
+type ResultObject {
+	bindings: [SparqlResultEntry]
+}
+
+
 type Query {
-  sparqlQuery(queryString: String!): String
+	sparqlQuery(queryString: String!): SparqlQueryResult
 }
 
