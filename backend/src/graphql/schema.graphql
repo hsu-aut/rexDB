@@ -1,0 +1,10 @@
+
+
+type SparqlQuery {
+	queryString: String
+}
+
+type Query {
+  sparqlQuery(queryString: String!): String
+}
+
