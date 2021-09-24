@@ -1,155 +1,321 @@
-<div [@routerTransition]>
-  <app-page-header [heading]="'Profil'"></app-page-header>
-</div>
 <div class="container-fluid">
-  <div class="main-body">
-       <div class="row gutters-sm">
+    <div class="main-body">
+        <div class="row">
 
-          <div class="col-sm-4 mb-3">
+            <div class="col-sm-4 mb-3">
 
-              <div class="card">
+                <div class="card">
 
-                  <div class="card-body">
-                      <div class="d-flex flex-column align-items-center text-center">
-                      <img src="https://profile-images.xing.com/images/3c5d977604b2031a0c75485ce3538605-4/maximilian-rappl.1024x1024.jpg" alt="Admin" class="rounded-circle" width="150">
-                          <div class="mt-3">
-                               <h4>Maximilian Rappl</h4>
-                               <p class="text-secondary mb-1">Wissenschaftlicher Mitarbeiter</p>
-                               <p class="text-muted font-size-sm">Helmut-Schmidt-Universität Hamburg</p>
-                               <button class="btn btn-danger">Follow</button>
-                               <button class="btn btn-outline-danger">Message</button>
-                          </div>
-                      </div>
+                    <div class="card-body">
 
-                  <div class="card-body">
-                      <div class="row">
-                          <div class="col-sm-3">
-                               <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe mr-2 icon-inline"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Email</h6>
-                          </div>
-                          <div class="col-sm-9 text-secondary">
-                              <input type="text" class="form-control" [(ngModel)]="mail" placeholder="E-Mail Address">
-                          </div>
-                      </div>
-                  <hr>
-                      <div class="row">
-                           <div class="col-sm-3">
-                              <h6 class="mb-0">Phone</h6>
-                           </div>
-                           <div class="col-sm-9 text-secondary">
-                              <input type="tel" class="form-control" [(ngModel)]="phoneNumber" placeholder="Phone">
-                           </div>
-                      </div>
-                  <hr>
-                      <div class="row">
-                          <div class="col-sm-3">
-                              <h6 class="mb-0">Mobile</h6>
-                          </div>
-                          <div class="col-sm-9 text-secondary">
-                              <input type="tel" class="form-control" [(ngModel)]="mobileNumber" placeholder="Mobile">
-                           </div>
-                      </div>
-                  <hr>
-                      <div class="row">
-                          <div class="col-sm-3">
-                              <h6 class="mb-0">Room</h6>
-                          </div>
-                          <div class="col-sm-9 text-secondary">
-                              <input type="text" class="form-control" [(ngModel)]="room" placeholder="Room">
-                          </div>
-                      </div>
-                  <hr>
-                      <div class="row">
-                          <div class="col-sm-3">
-                              <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github mr-2 icon-inline"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>Github</h6>
-                          </div>
-                          <div class="col-sm-9 text-secondary">
-                              <input type="text" class="form-control" [(ngModel)]="githubAccount" placeholder="rapplAUT" >
-                          </div>
-                      </div>
-                  <hr>
-                      <div class="row">
-                          <div class="col-sm-3">
-                              <h6 class="mb-0">Project</h6>
-                          </div>
-                          <div class="col-sm-9 text-secondary">
-                              <input type="text" class="form-control" [(ngModel)]="date" placeholder="Project">
-                          </div>
-                      </div>
-                  <hr>
-                      <div class="row">
-                          <div class="col-sm-3">
-                              <h6 class="mb-0">Project Start</h6>
-                          </div>
-                          <div class="col-sm-9 text-secondary">
-                              <input type="text" class="form-control" [(ngModel)]="date" placeholder="Start Date">
-                          </div>
-                      </div>
-                  </div>
+                        <div class="d-flex flex-column-sm-4 align-items-center text-center">
+                            <img src="https://profile-images.xing.com/images/3c5d977604b2031a0c75485ce3538605-4/maximilian-rappl.1024x1024.jpg" alt="Admin" class="rounded-circle" width="200">
+                            <div class="mt-3">
+                                <h4>Maximilian Rappl</h4>
+                                <p class="text-secondary mb-1">Wissenschaftlicher Mitarbeiter</p>
+                                <p class="text-muted font-size-sm">Helmut-Schmidt-Universität Hamburg</p>
+                                <button class="btn btn-danger">Add +</button>
+                                <button class="btn btn-outline-danger">Message</button>
+                            </div>
+                        </div>
 
-                  </div>
 
-                  <div class="card-footer">
-                      <input type="button" class="btn btn-danger px-4" value="Save Changes" style="float: right;">
-                  </div>
+                        <!-- <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-globe mr-2 icon-inline">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                                            <path
+                                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                            </path>
+                                        </svg>Email</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    <input type="text" class="form-control" [(ngModel)]="profil.mail"
+                                        placeholder="E-Mail Address">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Phone</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    <input type="tel" class="form-control"
+                                        placeholder="Phone">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Mobile</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    <input type="tel" class="form-control"
+                                        placeholder="Mobile">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Room</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    <input type="text" class="form-control" placeholder="Room">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-github mr-2 icon-inline">
+                                            <path
+                                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                            </path>
+                                        </svg>Github</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    <input type="text" class="form-control"
+                                        placeholder="rapplAUT">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Project</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    <input type="text" class="form-control"  placeholder="Project">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Project Start</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    <input type="text" class="form-control"  placeholder="Start Date">
+                                </div>
+                            </div>
+                        </div> -->
 
-              </div>
-
-          </div>
-
-          <div class="col-sm-8">
-
-              <div class="card">
-
-                 <div class="card-header"><h6>Expertise Level</h6></div>
-                      <div class="card-body">
-                          <middlen>Programming</middlen>
-                              <div class="progress mb-3" style="height: 40px">
-                                  <div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                          <middlen>Semantic Technologies</middlen>
-                              <div class="progress mb-3" style="height: 40px">
-                                  <div class="progress-bar bg-danger" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                          <middlen>Web Development</middlen>
-                              <div class="progress mb-3" style="height: 40px">
-                                  <div class="progress-bar bg-danger" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                          <middlen>Mobile Template</middlen>
-                              <div class="progress mb-3" style="height: 40px">
-                                  <div class="progress-bar bg-danger" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                          <middlen>Backend API</middlen>
-                              <div class="progress mb-3" style="height: 40px">
-                                  <div class="progress-bar bg-danger" style=" " role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                          <middlen>Add Expertise</middlen>
-                              <div class="progress mb-3" style="height: 40px" >
-                                  <input type="button" class="btn btn-danger px-4" value="+ Add Expertise">
-                              </div>
-                      </div>
-
-                  <div class="card-footer">
-                      <input type="button" class="btn btn-danger px-3" value="Save Changes" style="float: right;">
-                  </div>
-
-              </div>
-
-          </div>
-
-      </div>
-  </div>
-</div>
+                    </div>
 
 
 
+                    <div class="card-body">
+                        <hr>
+                        <label><h6>Followers (10)</h6></label>
+
+                        <div class="list-group">
+                            <a class="list-group-item">
+                                <div class="d-flex flex-column-sm-4 align-items-center text-center">
+                                    <img src="https://www.hsu-hh.de/aut/wp-content/uploads/sites/670/2020/10/Foto-Aljosha-Koecher_20200223_quadratisch-300x300.jpg" alt="Admin" class="rounded-circle" width="90">
+                                    <i></i>
+                                    <div class="mt-2 px-3">
+                                        <h6>Aljosha Köcher</h6>
+                                        <p class="text-secondary mb-1">Wissenschaftlicher Mitarbeiter</p>
+                                        <p class="text-muted font-size-sm">Helmut-Schmidt-Universität Hamburg</p>
+                                        <div class="mt-2 px-5">
+                                            <button class="btn btn-danger">Add +</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="list-group-item">
+                                <div class="d-flex flex-column-sm-4 align-items-center text-center">
+                                    <img src="https://i1.rgstatic.net/ii/profile.image/1037392886636548-1624345146891_Q128/Aron-Schnakenbeck.jpg" alt="Admin" class="rounded-circle" width="90">
+                                    <i></i>
+                                    <div class="mt-2 px-3">
+                                        <h6>Aron Schnakenbeck</h6>
+                                        <p class="text-secondary mb-1">Wissenschaftlicher Mitarbeiter</p>
+                                        <p class="text-muted font-size-sm">Helmut-Schmidt-Universität Hamburg</p>
+                                        <div class="mt-2 px-5">
+                                            <button class="btn btn-danger">Add +</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="card-footer">
+                        <input type="button" class="btn btn-danger px-4" value="Save Changes" style="float: right;">
+                    </div>
+                </div>
+            </div>
 
 
 
 
+            <div class="col-sm-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h6>Info</h6>
+                    </div>
+                    <div class="card-body">
+
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" aria-controls="profile" role="tab" aria-selected="true">Profile</button>
+                            </li>
+                            <!--  <li class=" nav-item " role="presentation ">
+                                <button class="nav-link " id="project-tab " data-bs-toggle="tab " data-bs-target="#project " type="button " aria-controls="project" role="tab" aria-selected="false">Project</button>
+                            </li> -->
+                            <!-- <li class="nav-item " role="presentation ">
+                                <button class="nav-link " id="tuition-tab " data-bs-toggle="tab " data-bs-target="#tuition " type="button " role="tab " aria-controls="tuition " aria-selected="false ">Tuition</button>
+                            </li> -->
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content ">
+                            <div class="tab-pane active" id="profile " role="tabpanel" aria-labelledby="profile-tab">
+                                <div class="row ">
+                                    <form (ngSubmit)="onSubmit(profil)" #profileForm="ngForm">
+
+                                        <div class="form-group">
+                                            <label for="name">Name</label>
+                                            <input type="text" class="form-control" id="name" required [(ngModel)]="profil.name" [ngModelOptions]="{standalone: true}">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="position">Position</label>
+                                            <input type="text" class="form-control" id="position" required [(ngModel)]="profil.position" [ngModelOptions]="{standalone: true}">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="hireDate ">Hire Date</label>
+                                            <input type="date" class="form-control" id="hireDate" required [(ngModel)]="profil.hireDate" [ngModelOptions]="{standalone: true}">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="mail ">E-Mail</label>
+                                            <input type="text" class="form-control" id="mail" required [(ngModel)]="profil.mail" [ngModelOptions]="{standalone: true}">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="phone">Phone</label>
+                                            <input type="text" class="form-control" id="phone" required [(ngModel)]="profil.phone" [ngModelOptions]="{standalone: true}">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="room">Room</label>
+                                            <input type="text" class="form-control" id="room" required [(ngModel)]="profil.room" [ngModelOptions]="{standalone: true}">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="github">Github</label>
+                                            <input type="text" class="form-control" id="github" required [(ngModel)]="profil.github" [ngModelOptions]="{standalone: true}">
+                                        </div>
+                                        <hr/>
+                                        <div>
+                                            <button type="submit" class="btn btn-danger px-3" [disabled]="!profileForm.form.valid" style="float: right;">Submit</button>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                            <!--   <div class="tab-pane " id="project" role="tabpanel" aria-labelledby="project-tab">
+                                <div class="row">
+                                    <form (ngSubmit)="onSubmit(profil)" #projectForm="ngForm">
+
+                                        <div class="form-group ">
+                                            <label for="projectName ">Project Name</label>
+                                            <input type="text " class="form-control " id="projectName" required [(ngModel)]="profil.projectName">
+                                        </div>
+
+                                        <div class="form-group ">
+                                            <label for="projectStart ">Project Start</label>
+                                            <input type="text " class="form-control " id="projectStart" required [(ngModel)]="profil.projectStart">
+                                        </div>
+
+                                        <div class="form-group ">
+                                            <label for="projectEnd ">Project End</label>
+                                            <input type="text " class="form-control " id="projectEnd" required [(ngModel)]="profil.projectEnd">
+                                        </div>
+
+                                        <div class="form-group ">
+                                            <label for="researchTopic ">Research Topic</label>
+                                            <input type="text " class="form-control " id="researchTopic" required [(ngModel)]="profil.researchTopic">
+                                        </div>
+
+                                        <button type="submit" class="btn btn-danger px-3" [disabled]="!projectForm.form.valid" style="float: right;">Submit</button>
+                                    </form>
+                                </div>
+                            </div> -->
+                            <!--  <div class="tab-pane " id="tuition " role="tabpanel " aria-labelledby="tuition-tab ">
+                                <div class="row ">
+                                    <form (ngSubmit)="onSubmit(profil)" #tuitionForm="ngForm">
+
+                                        <div class="form-group">
+                                            <label for="profil.tuitionModel ">Tuition Module</label>
+                                            <input type="text " class="form-control " id="profil?.tuitionModel " required [(ngModel)]="profil.tuitionModel ">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="studentProject ">Student Project</label>
+                                            <input type="text " class="form-control " id="studentProject " required [(ngModel)]="profil.studentProject ">
+                                        </div>
+
+                                        <button type="submit " class="btn btn-danger px-3 " [disabled]="!tuitionForm.form.valid " style="float: right; ">Submit</button>
+                                    </form>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
 
 
+            </div>
+        </div>
+    </div>
 
+    <div class="row mt-3 ">
+        <div class="col-sm-12 ">
 
+            <div class="card ">
 
+                <div class="card-header ">
+                    <h6>Expertise Level</h6>
+                </div>
+                <div class="card-body ">
+                    <div>Programming</div>
+                    <div class="progress mb-3 " style="height: 40px ">
+                        <div class="progress-bar bg-danger " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                    </div>
+                    <div>Semantic Technologies</div>
+                    <div class="progress mb-3 " style="height: 40px ">
+                        <div class="progress-bar bg-danger " role="progressbar " style="width: 72% " aria-valuenow="72 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                    </div>
+                    <div>Web Development</div>
+                    <div class="progress mb-3 " style="height: 40px ">
+                        <div class="progress-bar bg-danger " role="progressbar " style="width: 89% " aria-valuenow="89 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                    </div>
+                    <div>Frontend</div>
+                    <div class="progress mb-3 " style="height: 40px ">
+                        <div class="progress-bar bg-danger " role="progressbar " style="width: 55% " aria-valuenow="55 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                    </div>
+                    <div>Backend</div>
+                    <div class="progress mb-3 " style="height: 40px ">
+                        <div class="progress-bar bg-danger " style="width: 65% " role="progressbar " style="width: 66% " aria-valuenow="66 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                    </div>
+                    <div>Add Expertise</div>
+                    <div class="progress mb-3 " style="height: 40px ">
+                        <input type="button " class="btn btn-danger px-4 " value="+ Add Expertise ">
+                    </div>
+                </div>
 
+                <div class="card-footer">
+                    <input type="button" class="btn btn-danger px-3" value="Save Changes" style="float: right;">
+                </div>
 
+            </div>
+
+        </div>
+    </div>
