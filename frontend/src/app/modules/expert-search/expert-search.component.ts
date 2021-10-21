@@ -14,21 +14,30 @@ import { Apollo, gql } from 'apollo-angular';
 export class ExpertSearchComponent implements OnInit {
 
 	str = 'PREFIX owl: <http://www.w3.org/2002/07/owl#>PREFIX rexDB: <http://www.hsu-hh.de/aut/ontologies/rexDB#>SELECT * WHERE { ?expert a rexDB:Wissenschaftlicher_Mitarbeiter.}';
-	result: any[];
+	graphQlResult: any[];
+	sparqlResult: any[];
 	notClick = true
 	loading = false;
 	error: any;
 
 	constructor(private apollo: Apollo) { }
 
-	testGraphQl(input) {
+
+	onSubmit(input) {
+		this.notClick = false;
+		this.loading = true;
+		console.log(input);
+		this.sendGraphQlQuery(this.wrapSparqlQuery(input));
+	}
+
+	sendGraphQlQuery(input) {
 		this.apollo
 			.watchQuery({
 				query: gql(input),
 			})
 			.valueChanges.subscribe((result: any) => {
-				this.result = this.unwrapGraphQlResponse(result);
-				//this.result = result;
+				this.graphQlResult = result;
+				this.sparqlResult = this.unwrapGraphQlResponse(result);
 				this.loading = result.loading;
 				this.error = result.error;
 			});
@@ -40,24 +49,16 @@ export class ExpertSearchComponent implements OnInit {
 	 * @returns graphQL query according to graphQL schema
 	 */
 	wrapSparqlQuery(sparqlQuery): String {
-		var graphQlQuery:String = '{ sparqlQuery(queryString: "';
-		graphQlQuery += sparqlQuery;
-		graphQlQuery += '") { results { bindings }}}';
-		return graphQlQuery;
+		return '{ sparqlQuery(queryString: "' + sparqlQuery + '") { results { bindings }}}'
  	}
 
-	 unwrapGraphQlResponse(graphQlResponse): any[] {
+	 /**
+	  * unwraps SPARQL response from graphQL response
+	  * @param graphQlResponse graphQL response from backend 
+	  * @returns SPARQL response as JSON object 
+	  */
+	unwrapGraphQlResponse(graphQlResponse): any[] {
 		return graphQlResponse.data.sparqlQuery.results.bindings[0]
-	 }
-
-	
-	onSubmit(input) {
-		//TODO: make a graphQL-query from SQRQL-input
-		this.notClick = false;
-		this.loading = true;
-		this.str = input;
-		console.log(this.str);
-		this.testGraphQl(this.wrapSparqlQuery(this.str));
 	}
 
 	ngOnInit() { }
