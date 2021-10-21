@@ -16,12 +16,13 @@
 <div *ngIf="error">
     Error :(
 </div>
-<div *ngIf="rates">
+<div *ngIf="result">
     <div class="card-header">
         Response:
     </div>
     <!--TODO: responsive to json answer-->
-    <div class="card-body table-responsive">
+    {{result | json}}
+    <!-- <div class="card-body table-responsive">
         <table class="table">
             <thead>
                 <tr>
@@ -38,5 +39,5 @@
                 </tbody>
             </div>
         </table>
-    </div>
+    </div> -->
 </div>

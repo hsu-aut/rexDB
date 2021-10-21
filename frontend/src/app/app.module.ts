@@ -20,27 +20,27 @@ registerLocaleData(localeDe);
 	imports: [
 		CommonModule,
 		BrowserModule,
-        FormsModule,
+		FormsModule,
 		BrowserAnimationsModule,
 		HttpClientModule,
 		LanguageTranslationModule,
 		AppRoutingModule,
 	],
 	declarations: [AppComponent],
-    providers: [AuthGuard,
-        //graphQL-Angular example server:
-        {
-            provide: APOLLO_OPTIONS,
-            useFactory: (httpLink: HttpLink) => {
-                return {
-                  cache: new InMemoryCache(),
-                  link: httpLink.create({
-                    uri: 'https://48p1r2roz4.sse.codesandbox.io',
-                  }),
-                };
-              },
-              deps: [HttpLink],
-            },],
+	providers: [AuthGuard,
+		//graphQL-Angular example server:
+		{
+			provide: APOLLO_OPTIONS,
+			useFactory: (httpLink: HttpLink) => {
+				return {
+					cache: new InMemoryCache(),
+					link: httpLink.create({
+						uri: 'http://localhost:3000/graphql',
+					}),
+				};
+			},
+			deps: [HttpLink],
+		},],
 	bootstrap: [AppComponent]
 })
 export class AppModule {}

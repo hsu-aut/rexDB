@@ -15,7 +15,7 @@ export class SparqlQueryService {
 			headers: {
 				"Content-Type": "application/sparql-query"
 			},
-			url: "http://139.11.207.213:3030/rexDB-test/sparql",
+			url: "http://139.11.207.213:3030/Beispiel/sparql",
 			data: queryString
 		};
 
