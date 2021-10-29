@@ -16,8 +16,12 @@ const routes: Routes = [
 			{ path: 'grid', loadChildren: () => import('../modules/grid/grid.module').then((m) => m.GridModule) },
 			{ path: 'components', loadChildren: () => import('../modules/bs-component/bs-component.module').then((m) => m.BsComponentModule)},
 			{ path: 'blank-page', loadChildren: () => import('../modules/blank-page/blank-page.module').then((m) => m.BlankPageModule)},
-			{ path: 'breaking-bad-quotes', loadChildren: () => import('../modules/breaking-bad-quotes/breaking-bad-quotes.module').then((m) => m.BreakingBadQuotesModule)},
-			{ path: 'profil', loadChildren: () => import('../modules/profil/profil.module').then((m) => m.ProfilModule) },
+			{ path: 'experts', loadChildren: () => import('../modules/experts/experts.module').then((m) => m.ExpertsModule) },
+			{ path: 'expertise', loadChildren: () => import('../modules/expertise/expertise.module').then((m) => m.ExpertiseModule) },
+			{ path: 'publications', loadChildren: () => import('../modules/publications/publications.module').then((m) => m.PublicationsModule) },
+			{ path: 'projects', loadChildren: () => import('../modules/projects/projects.module').then((m) => m.ProjectsModule) },
+			{ path: 'ontology-management', loadChildren: () => import('../modules/ontology-management/ontology-management.module').then((m) => m.OntologyManagementModule) },
+			{ path: 'profile', loadChildren: () => import('../modules/profile/profile.module').then((m) => m.ProfileModule) },
 			{ path: 'expert-search', loadChildren: () => import('../modules/expert-search/expert-search.module').then((m) => m.ExpertSearchModule)}
 		]
 	}
