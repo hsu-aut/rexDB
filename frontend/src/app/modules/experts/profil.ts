@@ -1,6 +1,6 @@
-export class Profil {
+export class Expert {
 
-    constructor(
+	constructor(
         public name: string,
         public position: string,
         public hireDate: Date,
@@ -15,6 +15,6 @@ export class Profil {
         public tuitionModel: string,
         public studentProject:string
 
-        ) {}
+	) {}
 
 }
