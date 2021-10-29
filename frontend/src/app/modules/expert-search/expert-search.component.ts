@@ -13,33 +13,52 @@ import { Apollo, gql } from 'apollo-angular';
 
 export class ExpertSearchComponent implements OnInit {
 
-	str = '{rates(currency: "USD") {currency rate} }';
-	result: any[];
+	str = 'PREFIX owl: <http://www.w3.org/2002/07/owl#>PREFIX rexDB: <http://www.hsu-hh.de/aut/ontologies/rexDB#>SELECT * WHERE { ?expert a rexDB:Wissenschaftlicher_Mitarbeiter.}';
+	graphQlResult: any[];
+	sparqlResult: any[];
 	notClick = true
 	loading = false;
 	error: any;
 
 	constructor(private apollo: Apollo) { }
 
-	testGraphQl(input) {
+
+	onSubmit(input) {
+		this.notClick = false;
+		this.loading = true;
+		console.log(input);
+		this.sendGraphQlQuery(this.wrapSparqlQuery(input));
+	}
+
+	sendGraphQlQuery(input) {
 		this.apollo
 			.watchQuery({
 				query: gql(input),
 			})
 			.valueChanges.subscribe((result: any) => {
-				this.result = result;
+				this.graphQlResult = result;
+				this.sparqlResult = this.unwrapGraphQlResponse(result);
 				this.loading = result.loading;
 				this.error = result.error;
 			});
 	}
 
-	onSubmit(input) {
-		//TODO: make a graphQL-query from SQRQL-input
-		this.notClick = false;
-		this.loading = true;
-		this.str = input;
-		console.log(this.str);
-		this.testGraphQl(this.str);
+	/**
+	 * wraps plain SPARQL into graphQL Query
+	 * @param sparqlQuery SPARQL from user input
+	 * @returns graphQL query according to graphQL schema
+	 */
+	wrapSparqlQuery(sparqlQuery): String {
+		return '{ sparqlQuery(queryString: "' + sparqlQuery + '") { results { bindings }}}'
+ 	}
+
+	 /**
+	  * unwraps SPARQL response from graphQL response
+	  * @param graphQlResponse graphQL response from backend 
+	  * @returns SPARQL response as JSON object 
+	  */
+	unwrapGraphQlResponse(graphQlResponse): any[] {
+		return graphQlResponse.data.sparqlQuery.results.bindings[0]
 	}
 
 	ngOnInit() { }

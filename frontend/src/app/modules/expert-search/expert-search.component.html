@@ -16,12 +16,12 @@
 <div *ngIf="error">
     Error :(
 </div>
-<div *ngIf="result">
+<div *ngIf="graphQlResult">
     <div class="card-header">
         Response:
     </div>
     <!--TODO: responsive to json answer-->
-    {{result | json}}
+    {{sparqlResult | json}}
     <!-- <div class="card-body table-responsive">
         <table class="table">
             <thead>
