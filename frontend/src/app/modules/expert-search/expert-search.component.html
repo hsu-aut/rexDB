@@ -21,7 +21,11 @@
         Response:
     </div>
     <!--TODO: responsive to json answer-->
+    
+    
     {{sparqlResult | json}}
+
+
     <!-- <div class="card-body table-responsive">
         <table class="table">
             <thead>
@@ -40,4 +44,26 @@
             </div>
         </table>
     </div> -->
+
+    <div class="card-body table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Var</th>
+                    <th>Type</th>
+                    <th>Content</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <tr>
+                    <td *ngFor="let variable of sparqlVars">{{variable}}</td>
+                    <td *ngFor="let content of sparqlResult">{{content.expert.type}}</td>
+                    <td *ngFor="let content of sparqlResult">{{content.expert.value}}</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
 </div>

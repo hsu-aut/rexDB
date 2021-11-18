@@ -16,6 +16,7 @@ export class ExpertSearchComponent implements OnInit {
 	str = 'PREFIX owl: <http://www.w3.org/2002/07/owl#>PREFIX rexDB: <http://www.hsu-hh.de/aut/ontologies/rexDB#>SELECT * WHERE { ?expert a rexDB:Wissenschaftlicher_Mitarbeiter.}';
 	graphQlResult: any[];
 	sparqlResult: any[];
+    sparqlVars: any[];
 	notClick = true
 	loading = false;
 	error: any;
@@ -27,17 +28,20 @@ export class ExpertSearchComponent implements OnInit {
 		this.notClick = false;
 		this.loading = true;
 		console.log(input);
-		this.sendGraphQlQuery(this.wrapSparqlQuery(input));
+		this.handleGraphQlQuery(this.wrapSparqlQuery(input));
 	}
 
-	sendGraphQlQuery(input) {
+	handleGraphQlQuery(input) {
 		this.apollo
 			.watchQuery({
 				query: gql(input),
 			})
 			.valueChanges.subscribe((result: any) => {
+                console.log(result);
 				this.graphQlResult = result;
-				this.sparqlResult = this.unwrapGraphQlResponse(result);
+				this.sparqlResult = result.data.sparqlQuery.results.bindings;
+                this.sparqlVars = result.data.sparqlQuery.head.vars;
+                console.log(this.sparqlVars);
 				this.loading = result.loading;
 				this.error = result.error;
 			});
@@ -49,17 +53,10 @@ export class ExpertSearchComponent implements OnInit {
 	 * @returns graphQL query according to graphQL schema
 	 */
 	wrapSparqlQuery(sparqlQuery): String {
-		return '{ sparqlQuery(queryString: "' + sparqlQuery + '") { results { bindings }}}'
+		return '{ sparqlQuery(queryString: "' + sparqlQuery + '") { head {vars}, results { bindings }}}'
  	}
 
-	 /**
-	  * unwraps SPARQL response from graphQL response
-	  * @param graphQlResponse graphQL response from backend 
-	  * @returns SPARQL response as JSON object 
-	  */
-	unwrapGraphQlResponse(graphQlResponse): any[] {
-		return graphQlResponse.data.sparqlQuery.results.bindings[0]
-	}
+
 
 	ngOnInit() { }
 
