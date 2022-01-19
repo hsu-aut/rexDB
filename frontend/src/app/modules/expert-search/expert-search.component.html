@@ -20,50 +20,28 @@
     <div class="card-header">
         Response:
     </div>
-    <!--TODO: responsive to json answer-->
-    
-    
-    {{sparqlResult | json}}
+
+   <!-- {{sparqlResult | json}}
+        {{sparqlVars | json}}   -->
 
 
-    <!-- <div class="card-body table-responsive">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Currency</th>
-                    <th>Rate</th>
-                </tr>
-            </thead>
-            <div *ngFor="let rate of rates">
-                <tbody>
+
+
+
+    <div class="card-body">
+        <table class="table table-responsive table-striped">
+            <ng-container *ngFor="let varr of sparqlVars">
+                <thead>
                     <tr>
-                        <td>{{ rate.currency }}</td>
-                        <td>{{ rate.rate }}</td>
+                        <th>{{varr}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let content of sparqlResult">
+                        <td>{{content[varr].value}}</td>
                     </tr>
                 </tbody>
-            </div>
+            </ng-container>         
         </table>
-    </div> -->
-
-    <div class="card-body table-responsive">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Var</th>
-                    <th>Type</th>
-                    <th>Content</th>
-                </tr>
-            </thead>
-            
-            <tbody>
-                <tr>
-                    <td *ngFor="let variable of sparqlVars">{{variable}}</td>
-                    <td *ngFor="let content of sparqlResult">{{content.expert.type}}</td>
-                    <td *ngFor="let content of sparqlResult">{{content.expert.value}}</td>
-
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    
+    </div>    
 </div>
