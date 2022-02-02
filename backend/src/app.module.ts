@@ -5,6 +5,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { SparqlQueryModule } from './graphql/sparql-query.module';
 import { BreakingBadQuoteModule } from './routes/breaking-bad-quotes/breaking-bad-quote.module';
+import { LoginModule } from './routes/login/login.module';
 
 @Module({
 	imports: [
@@ -17,6 +18,7 @@ import { BreakingBadQuoteModule } from './routes/breaking-bad-quotes/breaking-ba
 			playground: true,
 		}),
 		BreakingBadQuoteModule,
+		LoginModule,
 		SparqlQueryModule
 	],
 	controllers: [AppController],
