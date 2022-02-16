@@ -14,8 +14,19 @@ type ResultObject {
 	bindings: [SparqlResultEntry]
 }
 
+type Expertise {
+    name: String
+    level: String
+}
+
+type Expert {
+    firstName: String
+    lastName: String
+    expertise: [ Expertise ]
+}
 
 type Query {
 	sparqlQuery(queryString: String!): SparqlQueryResult
+    greeting: String
+    experts: [ Expert ]
 }
-

@@ -1,6 +1,6 @@
 import { CommonModule, registerLocaleData } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import { NgModule , CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -14,6 +14,8 @@ import { APOLLO_OPTIONS } from 'apollo-angular';
 import {HttpLink} from 'apollo-angular/http';
 import { InMemoryCache } from '@apollo/client/core';
 import { FormsModule } from '@angular/forms';
+import { MatSliderModule } from '@angular/material/slider';
+//import { AngularMaterialModule } from './angular-material.module';
 registerLocaleData(localeDe);
 
 @NgModule({
@@ -25,6 +27,8 @@ registerLocaleData(localeDe);
 		HttpClientModule,
 		LanguageTranslationModule,
 		AppRoutingModule,
+        MatSliderModule,
+        //AngularMaterialModule,
 	],
 	declarations: [AppComponent],
 	providers: [AuthGuard,
@@ -41,6 +45,7 @@ registerLocaleData(localeDe);
 			},
 			deps: [HttpLink],
 		},],
-	bootstrap: [AppComponent]
+	bootstrap: [AppComponent],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {}

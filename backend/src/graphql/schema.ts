@@ -7,21 +7,36 @@
 
 /* tslint:disable */
 /* eslint-disable */
-export interface SparqlQueryResult {
+export class SparqlQueryResult {
     head?: Nullable<HeadObject>;
     results?: Nullable<ResultObject>;
 }
 
-export interface HeadObject {
+export class HeadObject {
     vars?: Nullable<Nullable<string>[]>;
 }
 
-export interface ResultObject {
+export class ResultObject {
     bindings?: Nullable<Nullable<SparqlResultEntry>[]>;
 }
 
-export interface IQuery {
-    sparqlQuery(queryString: string): Nullable<SparqlQueryResult> | Promise<Nullable<SparqlQueryResult>>;
+export class Expertise {
+    name?: Nullable<string>;
+    level?: Nullable<string>;
+}
+
+export class Expert {
+    firstName?: Nullable<string>;
+    lastName?: Nullable<string>;
+    expertise?: Nullable<Nullable<Expertise>[]>;
+}
+
+export abstract class IQuery {
+    abstract sparqlQuery(queryString: string): Nullable<SparqlQueryResult> | Promise<Nullable<SparqlQueryResult>>;
+
+    abstract greeting(): Nullable<string> | Promise<Nullable<string>>;
+
+    abstract experts(): Nullable<Nullable<Expert>[]> | Promise<Nullable<Nullable<Expert>[]>>;
 }
 
 export type SparqlResultEntry = any;
