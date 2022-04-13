@@ -15,12 +15,12 @@ export class ExpertResolver {
     //https://www.npmjs.com/package/graphql-fields
 	async experts(@FieldMap() fieldMap: FieldMapType,) { 
 		console.log("resolver resolves expert");
-        console.log(fieldMap); //TODO: Syntax ist nicht korrekt
+        console.log(fieldMap); //TODO: Syntax ist nicht korrekt; TODO: Typisierung über "... on Expert" wird nicht wieder gegeben
 
         //https://www.npmjs.com/package/graphql-to-sparql
         const algebra = await new Converter().graphqlToSparqlAlgebra('{experts{ ... on Expert{firstName,lastName,expertise{name, level}}}}', {
-            "Expert": "http://example.org/Expert",
-            "experts": {"@id": "http://example.org/experts"}, //TODO: Typisieren von Experts fehlt. Wie geht das in JSON LD?
+            "Expert": "http://example.org/Expert",  //Typisieren des RDF-types über graphql inline fragments: '{experts{ ... on Expert{firstName,lastName,expertise{name, level}}}}'
+            "experts": {"@id": "http://example.org/experts"}, 
             "firstName": "http://example.org/firstName",
             "lastName": "http://example.org/lastName",
             "expertise": "http://example.org/expertise",
@@ -28,7 +28,6 @@ export class ExpertResolver {
             "level": "http://example.org/expLevel"
         });
 
-        console.log(algebra);
         //https://www.npmjs.com/package/sparqlalgebrajs
         console.log(toSparql(algebra));
 
